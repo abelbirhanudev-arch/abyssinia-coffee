@@ -1,16 +1,17 @@
 import Image from "next/image";
+import OrderButton from "./components/OrderButton";
 
 export default function Home() {
   return (
    <main className="min-h-screen scroll-smooth bg-amber-50 text-stone-900">
       {/* Navigation */}
-     <nav className="sticky top-0 z-50 flex items-center justify-between border-b border-stone-200 bg-white/90 px-4 py-4 sm:px-10 sm:py-5 backdrop-blur sm:px-10">
+     <nav className="sticky top-0 z-50 flex items-center justify-between border-b border-stone-200 bg-white/90 px-4 py-4 backdrop-blur sm:px-10 sm:py-5">
 <div className="flex items-center gap-2">
   <span className="text-2xl">☕</span>
   <h2 className="text-xl font-bold">Abyssinia Coffee</h2>
 </div>
 
-  <div className="flex items-center gap-3 text-xs font-medium sm:gap-5 sm:text-sm">
+<div className="flex items-center gap-2 text-xs font-medium sm:gap-5 sm:text-sm">
         <a
   href="#home"
   className="transition-colors duration-300 hover:text-amber-700"
@@ -122,7 +123,7 @@ className="h-[500px] w-full rounded-3xl object-cover shadow-2xl transition durat
 </div>
 
 <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          <div className="flex flex-col rounded-2xl bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-2 hover:shadow-xl">
+          <div className="flex flex-col rounded-2xl bg-white p-6 shadow-sm transition duration-300  hover:shadow-xl">
             <div className="mb-4 text-3xl">☕</div>
 
 <h3 className="text-xl font-bold">Ethiopian Coffee</h3>
@@ -130,17 +131,10 @@ className="h-[500px] w-full rounded-3xl object-cover shadow-2xl transition durat
                 Freshly roasted Ethiopian coffee with a rich, traditional flavor.
               </p>
             <p className="mt-4 text-lg font-bold text-amber-700">120 ETB</p>
-              <a
-  href="https://wa.me/251900000000?text=Hello%2C%20I%27d%20like%20to%20order%20Ethiopian%20Coffee."
-  target="_blank"
-rel="noopener noreferrer"
-  className="mt-auto inline-block rounded-full bg-stone-900 px-5 py-2 text-sm font-semibold text-white transition duration-300 hover:-translate-y-1 hover:bg-stone-700"
->
-  Order Now
-</a>
+          <OrderButton coffeeName="Ethiopian Coffee" price={120} />
             </div>
 
-           <div className="flex flex-col rounded-2xl bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-2 hover:shadow-xl">
+           <div className="flex flex-col rounded-2xl bg-white p-6 shadow-sm transition duration-300  hover:shadow-xl">
            <div className="mb-4 text-3xl">☕</div>
 
 <h3 className="text-xl font-bold">Macchiato</h3>
@@ -148,16 +142,9 @@ rel="noopener noreferrer"
                 Smooth espresso combined with warm, creamy milk.
               </p>
           <p className="mt-4 text-lg font-bold text-amber-700">150 ETB</p>
-              <a
- href="https://wa.me/251900000000?text=Hello%2C%20I%27d%20like%20to%20order%20a%20Macchiato."
- target="_blank"
-rel="noopener noreferrer"
-  className="mt-auto inline-block rounded-full bg-stone-900 px-5 py-2 text-sm font-semibold text-white transition duration-300 hover:-translate-y-1 hover:bg-stone-700"
->
-  Order Now
-</a>
+    <OrderButton coffeeName="Macchiato" price={150} />
             </div>
-<div className="flex flex-col rounded-2xl bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-2 hover:shadow-xl">
+<div className="flex flex-col rounded-2xl bg-white p-6 shadow-sm transition duration-300  hover:shadow-xl">
              <div className="mb-4 text-3xl">☕</div>
 
 <h3 className="text-xl font-bold">Traditional Bunna</h3>
@@ -165,14 +152,7 @@ rel="noopener noreferrer"
                 A traditional Ethiopian coffee experience served with care.
               </p>
             <p className="mt-4 text-lg font-bold text-amber-700">180 ETB</p>
-              <a
-href="https://wa.me/251900000000?text=Hello%2C%20I%27d%20like%20to%20order%20Traditional%20Bunna."
-target="_blank"
-rel="noopener noreferrer"
-  className="mt-auto inline-block rounded-full bg-stone-900 px-5 py-2 text-sm font-semibold text-white transition duration-300 hover:-translate-y-1 hover:bg-stone-700"
->
-  Order Now
-</a>
+  <OrderButton coffeeName="Traditional Bunna" price={180} />
             </div>
           </div>
         </div>
@@ -189,7 +169,7 @@ rel="noopener noreferrer"
     </h2>
 
     <div className="mt-10 grid gap-6 sm:grid-cols-3">
-      <div className="rounded-2xl bg-white p-8 text-center shadow-sm transition duration-300 hover:-translate-y-2 hover:shadow-xl">
+      <div className="rounded-2xl bg-white p-8 text-center shadow-sm transition duration-300  hover:shadow-xl">
         <div className="text-4xl">☕</div>
         <h3 className="mt-4 text-xl font-bold">Authentic Coffee</h3>
         <p className="mt-3 text-stone-600">
@@ -197,7 +177,7 @@ rel="noopener noreferrer"
         </p>
       </div>
 
-      <div className="rounded-2xl bg-white p-8 text-center shadow-sm transition duration-300 hover:-translate-y-2 hover:shadow-xl">
+      <div className="rounded-2xl bg-white p-8 text-center shadow-sm transition duration-300  hover:shadow-xl">
         <div className="text-4xl">🌱</div>
         <h3 className="mt-4 text-xl font-bold">Quality Beans</h3>
         <p className="mt-3 text-stone-600">
@@ -205,7 +185,7 @@ rel="noopener noreferrer"
         </p>
       </div>
 
-      <div className="rounded-2xl bg-white p-8 text-center shadow-sm transition duration-300 hover:-translate-y-2 hover:shadow-xl">
+      <div className="rounded-2xl bg-white p-8 text-center shadow-sm transition duration-300  hover:shadow-xl">
         <div className="text-4xl">🤝</div>
         <h3 className="mt-4 text-xl font-bold">Warm Hospitality</h3>
         <p className="mt-3 text-stone-600">
@@ -267,21 +247,21 @@ rel="noopener noreferrer"
           </p>
 
           <h2 className="mt-3 text-4xl font-bold">
-            Visit Abyssinia Coffee
+          Visit Abyssinia Coffee
           </h2>
 
           <p className="mx-auto mt-5 max-w-xl text-stone-600">
-            Have a question or want to visit us? We would love to hear from you.
+           A portfolio project showcasing a modern Ethiopian coffee website and interactive ordering experience.
           </p>
 
           <div className="mt-10 grid gap-6 sm:grid-cols-3">
-            <div className="rounded-2xl bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-2 hover:shadow-xl">
+            <div className="rounded-2xl bg-white p-6 shadow-sm transition duration-300  hover:shadow-xl">
             <div className="mb-3 text-2xl">📍</div>
 <h3 className="font-bold">Location</h3>
               <p className="mt-2 text-stone-600">Addis Ababa, Ethiopia</p>
             </div>
 
-           <div className="rounded-2xl bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-2 hover:shadow-xl">
+           <div className="rounded-2xl bg-white p-6 shadow-sm transition duration-300  hover:shadow-xl">
              <div className="mb-3 text-2xl">📞</div>
 <h3 className="font-bold">Phone</h3>
              <a
